@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core"
 import { MatCardModule } from "@angular/material/card"
 import { MatIconModule } from "@angular/material/icon"
-import { MatExpansionModule } from "@angular/material/expansion"
+import { MatButtonModule } from "@angular/material/button"
 import { CurrencyPipe } from "@angular/common"
 import { Account } from "../account.model"
 import { AccountsService } from "../account.service"
@@ -9,7 +9,7 @@ import { Subscription } from "rxjs"
 
 @Component({
     selector: "app-account-list",
-    imports: [MatCardModule, MatIconModule, MatExpansionModule, CurrencyPipe],
+    imports: [MatCardModule, MatIconModule, MatButtonModule, CurrencyPipe],
     templateUrl: "./account-list.component.html",
     styleUrl: "./account-list.component.scss",
 })

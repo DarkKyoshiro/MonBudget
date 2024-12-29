@@ -13,7 +13,9 @@
             <button matSuffix mat-icon-button aria-label="Clear" (click)="accountName.reset()">
                 <mat-icon>close</mat-icon>
             </button>
-            } @if (accountName.invalid) {<mat-error>Veuillez entrer un nom de compte !</mat-error>}
+            } @if (accountName.invalid && (accountName.dirty || accountName.touched)) {<mat-error
+                >Veuillez entrer un nom de compte !</mat-error
+            >}
         </mat-form-field>
 
         <mat-form-field appearance="outline" subscriptSizing="dynamic">
@@ -27,7 +29,8 @@
             <button matSuffix mat-icon-button aria-label="Clear" (click)="accountType.reset()">
                 <mat-icon>close</mat-icon>
             </button>
-            } @if (accountType.invalid) {<mat-error>Veuillez choisir un type de compte !</mat-error
+            } @if (accountType.invalid && accountType.value) {<mat-error
+                >Veuillez choisir un type de compte !</mat-error
             >}
         </mat-form-field>
 

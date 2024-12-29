@@ -32,5 +32,6 @@ export class AccountCreateComponent {
             return
         }
         this.accountsService.addAccount(form.value.accountName, form.value.type, form.value.balance)
+        form.resetForm()
     }
 }
