@@ -1,0 +1,24 @@
+main {
+    width: 80%;
+    min-width: min-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+mat-card {
+    flex: 1;
+    min-width: fit-content;
+}
+
+mat-card-header {
+    align-items: center;
+}
+
+.mat-mdc-card-avatar {
+    margin-bottom: 0;
+}

@@ -1,0 +1,44 @@
+<mat-card>
+    <form (submit)="onAddAccount(accountForm)" #accountForm="ngForm">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic">
+            <mat-label>Nom du compte</mat-label>
+            <input
+                matInput
+                type="text"
+                name="accountName"
+                ngModel
+                required
+                #accountName="ngModel" />
+            @if (accountName.value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="accountName.reset()">
+                <mat-icon>close</mat-icon>
+            </button>
+            } @if (accountName.invalid) {<mat-error>Veuillez entrer un nom de compte !</mat-error>}
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" subscriptSizing="dynamic">
+            <mat-label>Type de compte</mat-label>
+            <mat-select name="type" ngModel required #accountType="ngModel">
+                <mat-option value="checking">Compte Courant</mat-option>
+                <mat-option value="saving">Compte Épargne</mat-option>
+                <mat-option value="credit">Carte de Crédit</mat-option>
+            </mat-select>
+            @if (accountType.value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="accountType.reset()">
+                <mat-icon>close</mat-icon>
+            </button>
+            } @if (accountType.invalid) {<mat-error>Veuillez choisir un type de compte !</mat-error
+            >}
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" subscriptSizing="dynamic">
+            <mat-label>Solde actuel</mat-label>
+            <input matInput type="number" name="balance" ngModel placeholder="0" />
+            <span matTextSuffix>CAD&nbsp;</span>
+        </mat-form-field>
+
+        <button mat-fab type="submit" [disabled]="accountForm.invalid">
+            <mat-icon>save</mat-icon>
+        </button>
+    </form>
+</mat-card>

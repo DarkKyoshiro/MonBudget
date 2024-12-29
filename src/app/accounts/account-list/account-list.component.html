@@ -1,0 +1,19 @@
+<main>
+    @if (accounts.length > 0) { @for (account of accounts; track $index) {
+    <mat-card>
+        <mat-card-header>
+            <mat-icon mat-card-avatar>
+                @if (account.type === "checking") { attach_money } @else if (account.type ===
+                "saving") { savings } @else { credit_card }
+            </mat-icon>
+            <mat-card-title>{{ account.name }}</mat-card-title>
+            <mat-card-subtitle>{{ account.balance | currency : "CAD" }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content></mat-card-content>
+    </mat-card>
+    } } @else {
+    <p class="mat-body-1">
+        Aucun compte n'existe ! Veuillez entrer au moins un compte au préalable.
+    </p>
+    }
+</main>
