@@ -1,5 +1,7 @@
 export interface Account {
-    name: string
+    id: string
+    accountName: string
     type: string
     balance: number
+    dateCreated: number
 }

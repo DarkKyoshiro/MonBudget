@@ -11,7 +11,7 @@ main {
 }
 
 mat-card {
-    flex: 1;
+    // flex: 1;
     min-width: fit-content;
 }
 
@@ -21,4 +21,13 @@ mat-card-header {
 
 .mat-mdc-card-avatar {
     margin-bottom: 0;
+}
+
+mat-card-footer {
+    padding: 1rem;
+    text-align: right;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
 }

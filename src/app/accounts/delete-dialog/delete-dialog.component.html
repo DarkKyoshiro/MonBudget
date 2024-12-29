@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Suppression de compte</h2>
+<mat-dialog-content>
+    Vous êtes sur le point de supprimer le compte <b>"{{ data.accountName }}"</b>. Ceci supprimera
+    toutes les données associées à ce compte. <br /><br />
+    Souhaitez-vous continuer ?
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="confirmDeletion()">Confirmer</button>
+    <button mat-button (click)="closeDialog()">Annuler</button>
+</mat-dialog-actions>
